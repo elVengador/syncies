@@ -11,8 +11,3 @@ export type MessageData = {
 export type MessagesResponse = { messages: MessageData[] }
 
 export type CustomMessageResponse = CustomArrayResponse<MessagesResponse>
-
-// export type CreateMessageResponse = null
-
-// export type CustomCreateMessageResponse =
-//   CustomObjectResponse<CreateMessageResponse>

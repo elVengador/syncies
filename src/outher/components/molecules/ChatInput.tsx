@@ -11,8 +11,9 @@ type ChatInputProps = {
 export const ChatInput = ({ sendMessage, className }: ChatInputProps) => {
   const [message, setMessage] = useState('')
 
-  const onSendMessage = () => {
+  const onSendMessage = (e: any) => {
     try {
+      e.preventDefault()
       setMessage('')
       sendMessage(message)
     } catch (error) {
@@ -21,7 +22,8 @@ export const ChatInput = ({ sendMessage, className }: ChatInputProps) => {
   }
 
   return (
-    <div
+    <form
+      onSubmit={(e) => onSendMessage(e)}
       className={twMerge(
         'w-full min-h-[40px] p-[10px] flex items-center justify-between dark:bg-neutral-700',
         className
@@ -34,16 +36,9 @@ export const ChatInput = ({ sendMessage, className }: ChatInputProps) => {
         onChange={setMessage}
         className=" dark:text-ev-light"
       />
-      <IconButton
-        color="foreground"
-        onPress={onSendMessage}
-        isDisabled={!message}
-      >
-        <FontAwesomeIcon
-          icon={faRocket}
-          //   className={`transition ${message ? 'rotate-0 ' : 'rotate-45'}`}
-        />
+      <IconButton color="foreground" isDisabled={!message}>
+        <FontAwesomeIcon icon={faRocket} />
       </IconButton>
-    </div>
+    </form>
   )
 }
