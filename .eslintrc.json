@@ -15,6 +15,9 @@
     }
   },
   "ignorePatterns": ["public"],
+  "env": {
+    "jest": true
+  },
   "rules": {
     // Possible Errors:
     "no-console": ["error", { "allow": ["warn", "error"] }],
