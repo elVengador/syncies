@@ -9,8 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "ev-component-library": "git@github.com:elVengador/ev-component-library.git#41a74316173e0ccf5e5c74208a80650931f5c41c",
     "react": "^18",
     "react-dom": "^18",
+    "react-stately": "^3.30.1",
+    "tailwind-merge": "^2.2.1",
     "next": "14.1.4"
   },
   "devDependencies": {
@@ -19,9 +25,14 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.4"
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "postcss": "^8",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.3.0"
   }
 }

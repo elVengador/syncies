@@ -1,3 +1,64 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:@next/next/recommended",
+    "prettier"
+  ],
+  "plugins": ["react", "react-hooks", "simple-import-sort"],
+  "parserOptions": {
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
+  },
+  "ignorePatterns": ["public"],
+  "rules": {
+    // Possible Errors:
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-debugger": "error",
+    "no-constant-condition": "error",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-undef": "error",
+    "no-use-before-define": "error",
+    "max-len": [
+      "error",
+      {
+        "code": 80,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "max-depth": ["error", 4],
+
+    // Best Practices:
+    "eqeqeq": "error",
+    "no-eval": "error",
+    "no-new-func": "error",
+    "no-prototype-builtins": "error",
+
+    // Stylistic Issues:
+    "indent": ["error", 2],
+    "semi": ["error", "never"],
+    "no-extra-semi": "error",
+    "quotes": ["error", "single"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "comma-style": ["error", "last"],
+    // "space-before-function-paren": ["error", "always"],
+    "camelcase": "error",
+    "no-trailing-spaces": "error",
+
+    // ES6:
+    "arrow-spacing": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "prefer-template": "error",
+
+    // plugins
+    "simple-import-sort/imports": "warn"
+  }
 }
